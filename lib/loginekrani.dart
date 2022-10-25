@@ -1,3 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class LoginEkrani extends StatelessWidget {
@@ -60,7 +64,26 @@ class LoginEkrani extends StatelessWidget {
                 SizedBox(height: 40.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [Text("Üye Ol"), Text("Şifremi Unuttum")],
+                  children: [
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("Üye Ol"),
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.blue,
+                        textStyle: TextStyle(fontSize: 15.0),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("Şifremi Unuttum"),
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.blue,
+                        textStyle: TextStyle(
+                          fontSize: 15.0,
+                        ),
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),
