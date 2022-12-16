@@ -8,20 +8,20 @@ class LoginEkrani extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 20, left: 20, bottom: 10, top: 10),
+      padding: const EdgeInsets.only(right: 20, left: 20, bottom: 10, top: 50),
       child: Material(
-        elevation: 1.0,
+        elevation: 3.0,
         borderRadius: BorderRadius.circular(12.0),
         child: Container(
           padding: EdgeInsets.all(18.0),
           width: double.infinity,
-          height: 500.0,
+          height: 550.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12.0),
             color: Colors.white,
           ),
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(8.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -44,43 +44,62 @@ class LoginEkrani extends StatelessWidget {
                 SizedBox(height: 20.0),
                 TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.account_circle_rounded),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25.0),
+                      ),
                       labelText: 'Kullanıcı Adı',
                       hintText: 'Kullanıcı Adınızı Girin'),
                 ),
                 SizedBox(height: 5.0),
                 TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(),
+                      prefixIcon: Icon(Icons.lock),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25.0),
+                      ),
                       labelText: 'Şifre',
                       hintText: 'Şifrenizi Girin'),
                 ),
-                SizedBox(height: 50.0),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text("GİRİŞ YAP"),
-                  style: ElevatedButton.styleFrom(fixedSize: Size(160, 50)),
-                ),
-                SizedBox(height: 40.0),
+                SizedBox(height: 10.0),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     TextButton(
                       onPressed: () {},
-                      child: Text("Üye Ol"),
+                      child: Text("Şifrenizi mi unuttunuz?"),
                       style: TextButton.styleFrom(
-                        foregroundColor: Colors.blue,
-                        textStyle: TextStyle(fontSize: 15.0),
+                        foregroundColor: Colors.black,
+                        textStyle: TextStyle(
+                            fontSize: 15.0, fontWeight: FontWeight.w500),
                       ),
                     ),
+                  ],
+                ),
+                SizedBox(
+                  height: 27,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text("GİRİŞ YAP"),
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25.0)),
+                    fixedSize: Size(160, 50),
+                  ),
+                ),
+                SizedBox(height: 40.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Yeni kullanıcı mısınız?"),
                     TextButton(
                       onPressed: () {},
-                      child: Text("Şifremi Unuttum"),
+                      child: Text("Üyelik Oluşturun"),
                       style: TextButton.styleFrom(
-                        foregroundColor: Colors.blue,
+                        foregroundColor: Colors.black,
                         textStyle: TextStyle(
-                          fontSize: 15.0,
-                        ),
+                            fontSize: 15.0, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],
