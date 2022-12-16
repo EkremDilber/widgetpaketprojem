@@ -53,6 +53,9 @@ class LoginEkrani extends StatelessWidget {
                 ),
                 SizedBox(height: 5.0),
                 TextField(
+                  obscureText: true,
+                  enableSuggestions: false,
+                  autocorrect: false,
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.lock),
                       border: OutlineInputBorder(
